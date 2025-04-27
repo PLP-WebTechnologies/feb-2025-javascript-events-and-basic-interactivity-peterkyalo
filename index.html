@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Event Handling & Interactive Elements Assignment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>JavaScript Interactive Elements</h1>
+    </header>
+
+    <main>
+        <!-- Event Handling Section -->
+        <section class="event-section">
+            <h2>Event Handling</h2>
+            
+            <div class="event-box">
+                <button id="click-button">Click Me!</button>
+                <p id="click-counter">Clicked 0 times</p>
+            </div>
+
+            <div class="event-box hover-box">
+                <p>Hover over me!</p>
+                <div class="hover-effect"></div>
+            </div>
+
+            <div class="event-box">
+                <p>Type something:</p>
+                <input type="text" id="keypress-input">
+                <p id="keypress-output"></p>
+            </div>
+
+            <div class="event-box secret-box">
+                <p>Double click or long press for a secret!</p>
+                <div class="secret-message hidden">🎉 You found the secret!</div>
+            </div>
+        </section>
+
+        <!-- Interactive Elements Section -->
+        <section class="interactive-section">
+            <h2>Interactive Elements</h2>
+            
+            <div class="interactive-box color-changer">
+                <button id="color-button">Change My Color</button>
+            </div>
+
+            <div class="interactive-box gallery">
+                <div class="gallery-container">
+                    <img src="images/image1.jpg" alt="Gallery image 1">
+                    <img src="images/image2.jpg" alt="Gallery image 2" class="hidden">
+                    <img src="images/image3.jpg" alt="Gallery image 3" class="hidden">
+                </div>
+                <div class="gallery-controls">
+                    <button class="gallery-prev">←</button>
+                    <button class="gallery-next">→</button>
+                </div>
+            </div>
+
+            <div class="interactive-box tabs">
+                <div class="tab-buttons">
+                    <button class="tab-button active" data-tab="tab1">Tab 1</button>
+                    <button class="tab-button" data-tab="tab2">Tab 2</button>
+                    <button class="tab-button" data-tab="tab3">Tab 3</button>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tab1">Content for Tab 1</div>
+                    <div class="tab-pane" id="tab2">Content for Tab 2</div>
+                    <div class="tab-pane" id="tab3">Content for Tab 3</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form Validation Section -->
+        <section class="form-section">
+            <h2>Form Validation</h2>
+            
+            <form id="validation-form">
+                <div class="form-group">
+                    <label for="name">Name (required)</label>
+                    <input type="text" id="name" required>
+                    <div class="error-message hidden">Please enter your name</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email">
+                    <div class="error-message hidden">Please enter a valid email</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password (min 8 characters)</label>
+                    <input type="password" id="password">
+                    <div class="error-message hidden">Password must be at least 8 characters</div>
+                    <div class="password-strength">
+                        <span class="strength-bar"></span>
+                        <span class="strength-text"></span>
+                    </div>
+                </div>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
